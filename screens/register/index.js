@@ -8,16 +8,6 @@ import {useFonts, Poppins_400Regular, Poppins_600SemiBold, Poppins_700Bold} from
 import AppTextInput from '../../components/AppTextInput';
 import { initializeApp } from '@firebase/app';
 
-const firebaseConfig = {
-    apiKey: "AIzaSyAXPRF9erOsBG2N1wkh4duWAHmCW6IjAqw",
-    authDomain: "app-kawa.firebaseapp.com",
-    projectId: "app-kawa",
-    storageBucket: "app-kawa.appspot.com",
-    messagingSenderId: "578365350225",
-    appId: "1:578365350225:web:c523447da2817bc1c8f370",
-    measurementId: "G-2PJG6FFNFP"
-  };
-
 const app = initializeApp(firebaseConfig);  
 
 export default function Register(useLinkProps, {email, setEmail, password, setPassword, isLogin, setIsLogin, handleAuthentication}) {
