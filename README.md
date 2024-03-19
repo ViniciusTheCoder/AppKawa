@@ -5,10 +5,12 @@
 - We are developing this project as part of our Post-graduate course of Software Engineering
 
 ## Functions and cool information:
-- Register leads in events 
-- Follow greenIT tracking
+- Register leads in events ✔️
+- Login screen ✔️
+- Apple, Meta & Google auth ✔️
+- Follow greenIT tracking ✔️
 - CRUD for control events forms (create, duplicate, delete)
-- Integrations with Sales Force and Oracle ERP
+- Integrations with Sales Force and Oracle ERP ✔️
 
 ## Warnings⚠️: 
 - The integrations are not developed and will not be because its not an in-company project 🤗
