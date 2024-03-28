@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity, Alert } from 'react-native';
 import Spacing from '../../constants/Spacing';
 import Colors from '../../constants/Colors';
@@ -288,7 +288,7 @@ export default function Events_List(useLinkProps) {
             }}
             >
             <TouchableOpacity
-          onPress={() => useLinkProps.navigation.navigate('Register_Customer')}
+          onPress={() => useLinkProps.navigation.navigate('Events_Creator')}
           style={{
             padding: Spacing * 2,
             width: 380,
