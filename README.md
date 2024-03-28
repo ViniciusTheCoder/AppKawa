@@ -11,6 +11,8 @@
 - Follow greenIT tracking ✔️
 - CRUD for control events forms (create, duplicate, delete)
 - Integrations with Sales Force and Oracle ERP ✔️
+- Push notifications (we're having issues with this one 😭)
+- Screen to request join the greenIT program
 
 ## Warnings⚠️: 
 - The integrations are not developed and will not be because its not an in-company project 🤗
