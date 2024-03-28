@@ -2,6 +2,7 @@ import Login from "./screens/login";
 import Register from "./screens/register"
 import Register_Customer from "./screens/register_customer";
 import GreenIT from "./screens/greenit";
+import Events_List from "./screens/events_list";
 
 import { useState, useEffect, useRef } from 'react';
 import { Platform } from 'react-native';
@@ -50,6 +51,7 @@ useEffect(() => {
         <Stack.Screen name='Register' component={Register} />
         <Stack.Screen name='Register_Customer' options={{ headerShown: false }}  component={Register_Customer} />
         <Stack.Screen name='GreenIT' options={{ headerShown: false }}  component={GreenIT} />
+        <Stack.Screen name='Events_List' options={{ headerShown: false }}  component={Events_List} />
       </Stack.Navigator>
     </NavigationContainer>
   )

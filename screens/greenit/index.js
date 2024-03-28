@@ -115,7 +115,8 @@ export default function GreenIT(useLinkProps) {
 
                     <Text style={{
                         fontFamily: fontLoaded ? 'Poppins_700Bold' : 'sans-serif',
-                        fontSize: 16
+                        fontSize: 16,
+                        color: Colors.lightPrimary
                     }}>75.000 - Valor em Crédito Verde</Text>
 
                 </View>
@@ -248,14 +249,17 @@ export default function GreenIT(useLinkProps) {
                     flexDirection: 'row',
                     justifyContent: 'space-around',
                     alignItems: 'space-between',
-                    paddingTop: Spacing * 5,
+                    paddingTop: Spacing * 8,
                 }}
             >
                 <TouchableOpacity>
-                    <FontAwesome name="user-plus" size={24} color={Colors.darkText} onPress={() => useLinkProps.navigation.navigate('Register_Customer')} />
+                <FontAwesome name="user-plus" size={24} color={Colors.darkText} onPress={() => useLinkProps.navigation.navigate('Register_Customer')}/>                
                 </TouchableOpacity>
                 <TouchableOpacity>
-                    <FontAwesome5 name="truck" size={24} color={Colors.haevyPrimary} />
+                <FontAwesome5 name="truck" size={24} color={Colors.haevyPrimary} onPress={() => useLinkProps.navigation.navigate('GreenIT')}/>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                <FontAwesome5 name="list" size={24} color={Colors.darkText} onPress={() => useLinkProps.navigation.navigate('Events_List')}/>
                 </TouchableOpacity>
             </View>
         </SafeAreaView>

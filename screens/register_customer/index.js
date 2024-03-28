@@ -145,6 +145,7 @@ export default function Register_Customer(useLinkProps) {
                 flexDirection: 'row',
                 justifyContent: 'space-around',
                 alignItems: 'space-between',
+                paddingTop: Spacing * 2
             }}
             >
                 <TouchableOpacity>
@@ -152,6 +153,9 @@ export default function Register_Customer(useLinkProps) {
                 </TouchableOpacity>
                 <TouchableOpacity>
                 <FontAwesome5 name="truck" size={24} color={Colors.darkText} onPress={() => useLinkProps.navigation.navigate('GreenIT')}/>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                <FontAwesome5 name="list" size={24} color={Colors.darkText} onPress={() => useLinkProps.navigation.navigate('Events_List')}/>
                 </TouchableOpacity>
             </View>
         </SafeAreaView>
