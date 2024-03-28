@@ -9,7 +9,7 @@
 - Login screen ✔️
 - Apple, Meta & Google auth ✔️
 - Follow greenIT tracking ✔️
-- CRUD for control events forms (create, duplicate, delete)
+- CRUD for control events forms (create, duplicate, delete) ✔️
 - Integrations with Sales Force and Oracle ERP ✔️
 - Push notifications (we're having issues with this one 😭)
 - Screen to request join the greenIT program
