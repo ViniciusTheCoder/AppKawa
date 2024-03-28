@@ -3,6 +3,7 @@ import Register from "./screens/register"
 import Register_Customer from "./screens/register_customer";
 import GreenIT from "./screens/greenit";
 import Events_List from "./screens/events_list";
+import GreenIT_Request from "./screens/greenit_request";
 
 import { useState, useEffect, useRef } from 'react';
 import { Platform } from 'react-native';

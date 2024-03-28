@@ -80,12 +80,36 @@ export default function GreenIT_Request(useLinkProps) {
                             textAlign: 'left',
                             paddingRight: Spacing * 10
                         }}
-                    >Insira os dados do lead para cadastrá-la no <Text style={{ color: Colors.borderWithOpacity, fontFamily: fontLoaded ? 'Poppins_700Bold' : 'sans-serif' }}>Sales Force</Text></Text>
+                    >Participe do programa <Text style={{ color: Colors.borderWithOpacity, fontFamily: fontLoaded ? 'Poppins_700Bold' : 'sans-serif' }}> GreenIT</Text></Text>
+                </View>
+
+                <View>
+                    <Text
+                        style={{
+                            fontFamily: fontLoaded ? 'Poppins_400Regular' : 'sans-serif',
+                            fontSize: FontSize.small,
+                            maxWidth: '100%',
+                            textAlign: 'left',
+                            paddingRight: Spacing * 3,
+                            marginLeft: 10
+                        }}
+                    >
+                        O GreenIT é um programa sustentável criado pela Furukawa há 15 anos, com o objetivo de reciclar produtos inutilizados e recompensar o cliente com produtos novinhos!</Text>
+                    <Text
+                        style={{
+                            fontFamily: fontLoaded ? 'Poppins_400Regular' : 'sans-serif',
+                            fontSize: FontSize.small,
+                            maxWidth: '100%',
+                            textAlign: 'left',
+                            paddingRight: Spacing * 3,
+                            marginLeft: 10
+                        }}
+                    >Para participar do programa, basta nos enviar a nota fiscal dos produtos que deseja reciclar</Text>
                 </View>
 
                 <View
                     style={{
-                        marginVertical: Spacing * 3
+                        marginVertical: Spacing
                     }}
                 >
 
@@ -141,21 +165,21 @@ export default function GreenIT_Request(useLinkProps) {
             </View>
 
             <View
-            style={{
-                flexDirection: 'row',
-                justifyContent: 'space-around',
-                alignItems: 'space-between',
-                paddingTop: Spacing * 2
-            }}
+                style={{
+                    flexDirection: 'row',
+                    justifyContent: 'space-around',
+                    alignItems: 'space-between',
+                    paddingTop: Spacing * 2
+                }}
             >
                 <TouchableOpacity>
-                <FontAwesome name="user-plus" size={24} color={Colors.haevyPrimary} />                
+                    <FontAwesome name="user-plus" size={24} color={Colors.haevyPrimary} />
                 </TouchableOpacity>
                 <TouchableOpacity>
-                <FontAwesome5 name="truck" size={24} color={Colors.darkText} onPress={() => useLinkProps.navigation.navigate('GreenIT')}/>
+                    <FontAwesome5 name="truck" size={24} color={Colors.darkText} onPress={() => useLinkProps.navigation.navigate('GreenIT')} />
                 </TouchableOpacity>
                 <TouchableOpacity>
-                <FontAwesome5 name="list" size={24} color={Colors.darkText} onPress={() => useLinkProps.navigation.navigate('Events_List')}/>
+                    <FontAwesome5 name="list" size={24} color={Colors.darkText} onPress={() => useLinkProps.navigation.navigate('Events_List')} />
                 </TouchableOpacity>
             </View>
         </SafeAreaView>
