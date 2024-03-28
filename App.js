@@ -10,6 +10,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as Device from 'expo-device';
 import * as Notifications from 'expo-notifications'
+import Events_Creator from "./screens/events_creator";
 
 Notifications.setNotificationHandler({
   handleNotification: async () => ({
@@ -52,6 +53,7 @@ useEffect(() => {
         <Stack.Screen name='Register_Customer' options={{ headerShown: false }}  component={Register_Customer} />
         <Stack.Screen name='GreenIT' options={{ headerShown: false }}  component={GreenIT} />
         <Stack.Screen name='Events_List' options={{ headerShown: false }}  component={Events_List} />
+        <Stack.Screen name='Events_Creator' options={{ headerShown: false }}  component={Events_Creator} />
       </Stack.Navigator>
     </NavigationContainer>
   )
