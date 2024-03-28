@@ -166,7 +166,7 @@ export default function GreenIT(useLinkProps) {
                     fontFamily: fontLoaded ? 'Poppins_700Bold' : 'sans-serif',
                     fontSize: 16
                 }}> Detalhes</Text>
-                <TouchableOpacity><AntDesign name="rightcircle" size={24} color="black" /></TouchableOpacity>
+                <TouchableOpacity onPress={() => useLinkProps.navigation.navigate('GreenIT_Request')}><AntDesign name="rightcircle" size={24} color="black" /></TouchableOpacity>
                 </View>
             </View>
 

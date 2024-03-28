@@ -54,6 +54,7 @@ useEffect(() => {
         <Stack.Screen name='GreenIT' options={{ headerShown: false }}  component={GreenIT} />
         <Stack.Screen name='Events_List' options={{ headerShown: false }}  component={Events_List} />
         <Stack.Screen name='Events_Creator' options={{ headerShown: false }}  component={Events_Creator} />
+        <Stack.Screen name='GreenIT_Request' options={{ headerShown: false }}  component={GreenIT_Request} />
       </Stack.Navigator>
     </NavigationContainer>
   )
