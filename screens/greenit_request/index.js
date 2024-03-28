@@ -7,7 +7,7 @@ import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 import { useFonts, Poppins_400Regular, Poppins_600SemiBold, Poppins_700Bold } from '@expo-google-fonts/poppins';
-import AppTextInput from '../../components/AppTextInput';
+import * as DocumentPicker from 'expo-document-picker';
 
 export default function GreenIT_Request(useLinkProps) {
 
@@ -43,6 +43,18 @@ export default function GreenIT_Request(useLinkProps) {
         );
     };
 
+    
+    const pickSomething = async () => {
+        try {
+            const docRes = await DocumentPicker.getDocumentAsync({
+                type: 'audio/*'
+            });
+            console.log(docRes)
+        } catch (error) {
+            console.log('Error while selecting file: ', error)
+        }
+    }
+
     return (
         <SafeAreaView>
             <View
@@ -75,10 +87,10 @@ export default function GreenIT_Request(useLinkProps) {
                     <Text
                         style={{
                             fontFamily: fontLoaded ? 'Poppins_600SemiBold' : 'sans-serif',
-                            fontSize: FontSize.medium,
+                            fontSize: FontSize.large,
                             maxWidth: '100%',
                             textAlign: 'left',
-                            paddingRight: Spacing * 10
+                            paddingRight: Spacing * 11
                         }}
                     >Participe do programa <Text style={{ color: Colors.borderWithOpacity, fontFamily: fontLoaded ? 'Poppins_700Bold' : 'sans-serif' }}> GreenIT</Text></Text>
                 </View>
@@ -87,7 +99,7 @@ export default function GreenIT_Request(useLinkProps) {
                     <Text
                         style={{
                             fontFamily: fontLoaded ? 'Poppins_400Regular' : 'sans-serif',
-                            fontSize: FontSize.small,
+                            fontSize: FontSize.medium,
                             maxWidth: '100%',
                             textAlign: 'left',
                             paddingRight: Spacing * 3,
@@ -98,7 +110,7 @@ export default function GreenIT_Request(useLinkProps) {
                     <Text
                         style={{
                             fontFamily: fontLoaded ? 'Poppins_400Regular' : 'sans-serif',
-                            fontSize: FontSize.small,
+                            fontSize: FontSize.medium,
                             maxWidth: '100%',
                             textAlign: 'left',
                             paddingRight: Spacing * 3,
@@ -109,17 +121,35 @@ export default function GreenIT_Request(useLinkProps) {
 
                 <View
                     style={{
-                        marginVertical: Spacing
+                        marginVertical: Spacing * 5
                     }}
                 >
 
-                    <AppTextInput placeholder='Nome' />
-                    <AppTextInput placeholder='Telefone' />
-                    <AppTextInput placeholder='CNPJ' />
-                    <AppTextInput placeholder='Razão Social' />
-                    <AppTextInput placeholder='E-mail' />
-
                 </View>
+
+                <TouchableOpacity
+                    onPress={pickSomething}
+                    style={{
+                        padding: Spacing * 2,
+                        backgroundColor: Colors.onPrimary,
+                        borderRadius: Spacing,
+                        shadowColor: Colors.shadowBox,
+                        shadowOffset: {
+                            width: 0,
+                            height: Spacing
+                        },
+                        shadowOpacity: 0.3,
+                        shadowOpacity: Spacing
+                    }}>
+                    <Text
+                        style={{
+                            color: Colors.text,
+                            textAlign: 'center',
+                            fontSize: FontSize.large,
+                            fontFamily: fontLoaded ? 'Poppins_700Bold' : 'sans-serif',
+                        }}
+                    >Anexar nota fiscal</Text>
+                </TouchableOpacity>
 
                 <TouchableOpacity
                     onPress={() => useLinkProps.navigation.navigate('Register_Customer')}
@@ -143,7 +173,7 @@ export default function GreenIT_Request(useLinkProps) {
                             fontSize: FontSize.large,
                             fontFamily: fontLoaded ? 'Poppins_700Bold' : 'sans-serif',
                         }}
-                    >Cadastrar Lead</Text>
+                    >Enviar Cadastro</Text>
                 </TouchableOpacity>
 
                 <View style={{
@@ -169,11 +199,11 @@ export default function GreenIT_Request(useLinkProps) {
                     flexDirection: 'row',
                     justifyContent: 'space-around',
                     alignItems: 'space-between',
-                    paddingTop: Spacing * 2
+                    paddingTop: Spacing * 13
                 }}
             >
                 <TouchableOpacity>
-                    <FontAwesome name="user-plus" size={24} color={Colors.haevyPrimary} />
+                    <FontAwesome name="user-plus" size={24} color={Colors.darkText} />
                 </TouchableOpacity>
                 <TouchableOpacity>
                     <FontAwesome5 name="truck" size={24} color={Colors.darkText} onPress={() => useLinkProps.navigation.navigate('GreenIT')} />
