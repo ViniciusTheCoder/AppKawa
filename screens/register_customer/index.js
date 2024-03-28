@@ -43,6 +43,20 @@ export default function Register_Customer(useLinkProps) {
         );
     };
 
+    const handleRegister = () => {
+        setTimeout(() => {
+          Alert.alert(
+            'Organização cadastrada com sucesso!',
+            '',
+            [{
+              text: 'Ok',
+              onPress: () => {},
+            }],
+            { cancelable: false },
+          );
+        }, 1000);
+      };
+
     return (
         <SafeAreaView>
             <View
@@ -98,7 +112,7 @@ export default function Register_Customer(useLinkProps) {
                 </View>
 
                 <TouchableOpacity
-                    onPress={() => useLinkProps.navigation.navigate('Register_Customer')}
+                    onPress={handleRegister}
                     style={{
                         padding: Spacing * 2,
                         backgroundColor: Colors.lightSecondary,

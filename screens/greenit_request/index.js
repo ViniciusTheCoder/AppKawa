@@ -43,6 +43,20 @@ export default function GreenIT_Request(useLinkProps) {
         );
     };
 
+    const handleNFSubmit = () => {
+        setTimeout(() => {
+            Alert.alert(
+              'Nota fiscal enviada com sucesso!',
+              '',
+              [{
+                text: 'Ok',
+                onPress: () => {},
+              }],
+              { cancelable: false },
+            );
+          }, 1000);
+    }
+
     
     const pickSomething = async () => {
         try {
@@ -121,7 +135,7 @@ export default function GreenIT_Request(useLinkProps) {
 
                 <View
                     style={{
-                        marginVertical: Spacing * 5
+                        marginVertical: Spacing * 14
                     }}
                 >
 
@@ -152,11 +166,11 @@ export default function GreenIT_Request(useLinkProps) {
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                    onPress={() => useLinkProps.navigation.navigate('Register_Customer')}
+                    onPress={handleNFSubmit}
                     style={{
                         padding: Spacing * 2,
                         backgroundColor: Colors.lightSecondary,
-                        marginVertical: Spacing * 3,
+                        marginTop: Spacing,
                         borderRadius: Spacing,
                         shadowColor: Colors.shadowBox,
                         shadowOffset: {
@@ -177,7 +191,7 @@ export default function GreenIT_Request(useLinkProps) {
                 </TouchableOpacity>
 
                 <View style={{
-                    marginVertical: Spacing * 3
+                    marginVertical: Spacing * 1.7
                 }}>
 
                     <View
@@ -199,14 +213,14 @@ export default function GreenIT_Request(useLinkProps) {
                     flexDirection: 'row',
                     justifyContent: 'space-around',
                     alignItems: 'space-between',
-                    paddingTop: Spacing * 13
+                    paddingTop: Spacing * 3
                 }}
             >
                 <TouchableOpacity>
-                    <FontAwesome name="user-plus" size={24} color={Colors.darkText} />
+                    <FontAwesome name="user-plus" size={24} color={Colors.darkText} onPress={() => useLinkProps.navigation.navigate('Register_Customer')}/>
                 </TouchableOpacity>
                 <TouchableOpacity>
-                    <FontAwesome5 name="truck" size={24} color={Colors.darkText} onPress={() => useLinkProps.navigation.navigate('GreenIT')} />
+                    <FontAwesome5 name="truck" size={24} color={Colors.haevyPrimary} onPress={() => useLinkProps.navigation.navigate('GreenIT')} />
                 </TouchableOpacity>
                 <TouchableOpacity>
                     <FontAwesome5 name="list" size={24} color={Colors.darkText} onPress={() => useLinkProps.navigation.navigate('Events_List')} />
