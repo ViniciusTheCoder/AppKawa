@@ -12,7 +12,7 @@
 - CRUD for control events forms (create, duplicate, delete) ✔️
 - Integrations with Sales Force and Oracle ERP ✔️
 - Push notifications (we're having issues with this one 😭)
-- Screen to request join the greenIT program✔ ✔️
+- Screen to request join the greenIT program ✔️
 - Home screen, the one that users see after login
 
 ## Warnings⚠️: 
