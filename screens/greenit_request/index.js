@@ -6,6 +6,7 @@ import Colors from '../../constants/Colors';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
+import { Entypo } from '@expo/vector-icons';
 import { useFonts, Poppins_400Regular, Poppins_600SemiBold, Poppins_700Bold } from '@expo-google-fonts/poppins';
 import * as DocumentPicker from 'expo-document-picker';
 
@@ -46,18 +47,18 @@ export default function GreenIT_Request(useLinkProps) {
     const handleNFSubmit = () => {
         setTimeout(() => {
             Alert.alert(
-              'Nota fiscal enviada com sucesso!',
-              '',
-              [{
-                text: 'Ok',
-                onPress: () => {},
-              }],
-              { cancelable: false },
+                'Nota fiscal enviada com sucesso!',
+                '',
+                [{
+                    text: 'Ok',
+                    onPress: () => { },
+                }],
+                { cancelable: false },
             );
-          }, 1000);
+        }, 1000);
     }
 
-    
+
     const pickSomething = async () => {
         try {
             const docRes = await DocumentPicker.getDocumentAsync({
@@ -120,7 +121,7 @@ export default function GreenIT_Request(useLinkProps) {
                             marginLeft: 10
                         }}
                     >
-                        O GreenIT é um programa sustentável criado pela Furukawa há 15 anos, com o objetivo de reciclar produtos inutilizados e recompensar o cliente com produtos novinhos!</Text>
+                        O GreenIT é um programa sustentável criado pela Furukawa há 15 anos.</Text>
                     <Text
                         style={{
                             fontFamily: fontLoaded ? 'Poppins_400Regular' : 'sans-serif',
@@ -130,12 +131,79 @@ export default function GreenIT_Request(useLinkProps) {
                             paddingRight: Spacing * 3,
                             marginLeft: 10
                         }}
-                    >Para participar do programa, basta nos enviar a nota fiscal dos produtos que deseja reciclar</Text>
+                    >Para participar do programa, anexe os documentos da nota fiscal e as imagens dos cabos que serão descartados.</Text>
+                </View>
+
+                <View>
+                    <Text
+                        style={{
+                            fontFamily: fontLoaded ? 'Poppins_400Regular' : 'sans-serif',
+                            fontSize: FontSize.medium,
+                            maxWidth: '100%',
+                            textAlign: 'left',
+                            paddingRight: Spacing * 3,
+                            marginLeft: 10
+                        }}
+                    >Quais cabos <Text style={{fontFamily: fontLoaded ? 'Poppins_700Bold' : 'sans-serif'}}>podem</Text> participar do programa?</Text>
+                    <View
+                    style={{
+                        flexDirection: 'row',
+                        paddingTop: Spacing
+                    }}
+                    >
+                    <Entypo name="check" size={24} color="green" />
+                    <Text style={{paddingTop: 1, fontFamily: fontLoaded ? 'Poppins_600SemiBold' : 'sans-serif', fontSize: FontSize.medium}}>Cabos de Redes Metálicas</Text>                    
+                    </View>
+                    <View
+                    style={{
+                        flexDirection: 'row',
+                        paddingTop: Spacing
+                    }}
+                    >
+                    <Entypo name="check" size={24} color="green" />
+                    <Text style={{paddingTop: 1, fontFamily: fontLoaded ? 'Poppins_600SemiBold' : 'sans-serif', fontSize: FontSize.medium}}>Cabos Telefônicos</Text>
+                    </View>
+                    <View
+                    style={{
+                        flexDirection: 'row',
+                        paddingTop: Spacing
+                    }}
+                    >
+                    <Entypo name="check" size={24} color="green" />
+                    <Text style={{paddingTop: 1, fontFamily: fontLoaded ? 'Poppins_600SemiBold' : 'sans-serif', fontSize: FontSize.medium}}>Cabos Elétricos</Text>
+                    </View>
+                    <View
+                    style={{
+                        flexDirection: 'row',
+                        paddingTop: Spacing
+                    }}
+                    >
+                    <Entypo name="cross" size={24} color="red" />
+                    <Text style={{paddingTop: 1, fontFamily: fontLoaded ? 'Poppins_600SemiBold' : 'sans-serif', fontSize: FontSize.medium}}>Cabos Coaxiais</Text>
+                    </View>
+                    <View
+                    style={{
+                        flexDirection: 'row',
+                        paddingTop: Spacing
+                    }}
+                    >
+                    <Entypo name="cross" size={24} color="red" />
+                    <Text style={{paddingTop: 1, fontFamily: fontLoaded ? 'Poppins_600SemiBold' : 'sans-serif', fontSize: FontSize.medium}}>Cabos CCA ou de Alumínio</Text>
+                    </View>
+                    <View
+                    style={{
+                        flexDirection: 'row',
+                        paddingTop: Spacing
+                    }}
+                    >
+                    <Entypo name="cross" size={24} color="red" />
+                    <Text style={{paddingTop: 1, fontFamily: fontLoaded ? 'Poppins_600SemiBold' : 'sans-serif', fontSize: FontSize.medium}}>Cabos de Fibra Óptica</Text>
+                    </View>
                 </View>
 
                 <View
                     style={{
-                        marginVertical: Spacing * 14
+                        marginVertical: Spacing * 3
                     }}
                 >
 
@@ -162,7 +230,7 @@ export default function GreenIT_Request(useLinkProps) {
                             fontSize: FontSize.large,
                             fontFamily: fontLoaded ? 'Poppins_700Bold' : 'sans-serif',
                         }}
-                    >Anexar nota fiscal</Text>
+                    >Anexar arquivos</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity
@@ -187,11 +255,11 @@ export default function GreenIT_Request(useLinkProps) {
                             fontSize: FontSize.large,
                             fontFamily: fontLoaded ? 'Poppins_700Bold' : 'sans-serif',
                         }}
-                    >Enviar Cadastro</Text>
+                    >Participar</Text>
                 </TouchableOpacity>
 
                 <View style={{
-                    marginVertical: Spacing * 1.7
+                    marginVertical: Spacing * 3
                 }}>
 
                     <View
@@ -217,7 +285,7 @@ export default function GreenIT_Request(useLinkProps) {
                 }}
             >
                 <TouchableOpacity>
-                    <FontAwesome name="user-plus" size={24} color={Colors.darkText} onPress={() => useLinkProps.navigation.navigate('Register_Customer')}/>
+                    <FontAwesome name="user-plus" size={24} color={Colors.darkText} onPress={() => useLinkProps.navigation.navigate('Register_Customer')} />
                 </TouchableOpacity>
                 <TouchableOpacity>
                     <FontAwesome5 name="truck" size={24} color={Colors.haevyPrimary} onPress={() => useLinkProps.navigation.navigate('GreenIT')} />
