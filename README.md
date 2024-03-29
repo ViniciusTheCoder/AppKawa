@@ -1,6 +1,6 @@
 # AppKawa ⚡
 
-## Status: Developing ⚙️
+## Status: Developed ✔️
 
 - We are developing this project as part of our Post-graduate course of Software Engineering
 
@@ -13,7 +13,7 @@
 - Integrations with Sales Force and Oracle ERP ✔️
 - Push notifications (we're having issues with this one 😭)
 - Screen to request join the greenIT program ✔️
-- Home screen, the one that users see after login
+- Home screen, the one that users see after login ✔️
 
 ## Warnings⚠️: 
 - The integrations are not developed and will not be because its not an in-company project 🤗
