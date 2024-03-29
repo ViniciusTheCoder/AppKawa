@@ -5,6 +5,7 @@ import GreenIT from "./screens/greenit";
 import Events_List from "./screens/events_list";
 import GreenIT_Request from "./screens/greenit_request";
 import Home from "./screens/home";
+import Home_Customer from "./screens/home_customer";
 
 import { useState, useEffect, useRef } from 'react';
 import { Platform } from 'react-native';
@@ -49,7 +50,7 @@ useEffect(() => {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
+      <Stack.Navigator initialRouteName="Home_Customer">
         <Stack.Screen name='Login' options={{ headerShown: false }} component={Login}/>
         <Stack.Screen name='Register' component={Register} />
         <Stack.Screen name='Register_Customer' options={{ headerShown: false }}  component={Register_Customer} />
@@ -58,6 +59,7 @@ useEffect(() => {
         <Stack.Screen name='Events_Creator' options={{ headerShown: false }}  component={Events_Creator} />
         <Stack.Screen name='GreenIT_Request' options={{ headerShown: false }}  component={GreenIT_Request} />
         <Stack.Screen name='Home' options={{ headerShown: false }}  component={Home} />
+        <Stack.Screen name='Home_Customer' options={{ headerShown: false }}  component={Home_Customer} />
       </Stack.Navigator>
     </NavigationContainer>
   )

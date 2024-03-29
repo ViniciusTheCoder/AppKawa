@@ -63,7 +63,7 @@ export default function Login(useLinkProps) {
         </View>
     
           <TouchableOpacity
-          onPress={() => useLinkProps.navigation.navigate('Register_Customer')}
+          onPress={() => useLinkProps.navigation.navigate('Home')}
           style={{
             padding: Spacing * 2,
             backgroundColor: Colors.lightSecondary,
