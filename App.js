@@ -50,7 +50,7 @@ useEffect(() => {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home_Customer">
+      <Stack.Navigator initialRouteName="Login">
         <Stack.Screen name='Login' options={{ headerShown: false }} component={Login}/>
         <Stack.Screen name='Register' component={Register} />
         <Stack.Screen name='Register_Customer' options={{ headerShown: false }}  component={Register_Customer} />

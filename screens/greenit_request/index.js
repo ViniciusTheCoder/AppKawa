@@ -28,7 +28,7 @@ export default function GreenIT_Request(useLinkProps) {
 
     const handleLogout = () => {
         Alert.alert(
-            'Você deseja sair?',
+            'Você deseja MESMO sair?',
             '',
             [
                 {
