@@ -26,7 +26,7 @@ Notifications.setNotificationHandler({
 function App(){
 const Stack = createNativeStackNavigator();
 
-const [expoPushToken, setExpoPushToken] = useState('');
+// const [expoPushToken, setExpoPushToken] = useState('');
 const [notification, setNotification] = useState(false);
 const notificationListener = useRef();
 const responseListener = useRef();
