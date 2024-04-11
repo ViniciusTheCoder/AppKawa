@@ -1,4 +1,4 @@
-# AppKawa ⚡
+# AppKawa ⚡ :)
 
 ## Status: Developed ✔️
 
