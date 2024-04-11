@@ -47,7 +47,7 @@ export default function GreenIT_Request(useLinkProps) {
     const handleNFSubmit = () => {
         setTimeout(() => {
             Alert.alert(
-                'Nota fiscal enviada com sucesso!',
+                'Nota fiscal enviada com sucesso no seu e-mail!',
                 '',
                 [{
                     text: 'Ok',
