@@ -38,6 +38,24 @@ yarn
 expo install
 ```
 
+You can also run this project using the React-Native CLI by the following commands: 
+
+
+```javascript
+yarn start
+```
+
+
+```javascript
+yarn run android
+```
+
+or
+
+```javascript
+yarn start
+```
+
 ```javascript
 yarn run ios
 ```
