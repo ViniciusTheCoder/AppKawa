@@ -1,6 +1,6 @@
 import Login from "./screens/login";
 import Register from "./screens/register"
-// import Register_Customer from "./screens/register_customer";
+import Register_Customer from "./screens/register_customer";
 import GreenIT from "./screens/greenit";
 import Events_List from "./screens/events_list";
 import GreenIT_Request from "./screens/greenit_request";
@@ -18,7 +18,7 @@ import Events_Creator from "./screens/events_creator";
 Notifications.setNotificationHandler({
   handleNotification: async () => ({
     shouldShowAlert: true,
-    // shouldPlaySound: false,
+    shouldPlaySound: false,
     shouldSetBadge: false,
   }),
 });
@@ -26,7 +26,7 @@ Notifications.setNotificationHandler({
 function App(){
 const Stack = createNativeStackNavigator();
 
-// const [expoPushToken, setExpoPushToken] = useState('');
+const [expoPushToken, setExpoPushToken] = useState('');
 const [notification, setNotification] = useState(false);
 const notificationListener = useRef();
 const responseListener = useRef();
